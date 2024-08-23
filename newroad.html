@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Transport</title>
+    <!--<link rel="stylesheet" href="styles.css">-->
+    <!--<script defer src="script.js"></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="./css/normal.css"> -->
+    <!-- <link rel="stylesheet" href="./css/responsive.css">  -->
+     <!-- <link rel="stylesheet" href="./css/style.css">  -->
+     <link rel="stylesheet" href="./css/normal.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: rgb(7, 2, 59);
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-container div {
+    margin: 10px 0;
+}
+
+.footer-address, .footer-contact, .footer-social, .footer-links {
+    width: 100%;
+}
+
+.footer-address p, .footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.footer-contact i {
+    margin-right: 10px;
+}
+
+.footer-social a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    color: #ffa500;
+}
+
+
+  /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: rgb(4, 13, 65);
+}
+img {
+    /* display: block; */
+    width: 1300px;
+    height:300px;
+    /* margin: 1rem auto; */
+}
+header {
+   background-image:url('https://connectedaviationtoday.com/wp-content/uploads/2018/12/shutterstock_1145439569.jpg');
+    background-color: #0056b3;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    display: inline;
+}
+
+#homeButton {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+section {
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ h2 {
+    text-align: center;
+    margin-bottom: 1rem; 
+}  
+
+header {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.feature-box {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px; /* For 3D flip effect */
+    margin: 1em;
+}
+
+.feature-content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.feature-box:hover .feature-content {
+    transform: rotateY(180deg);
+}
+
+.feature-front, .feature-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0;
+}
+
+.feature-front {
+    background-color: #004080;
+    color: white;
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.feature-back {
+    background-color: #0070c0;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+}
+
+.transport-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.back-content {
+    padding: 1em;
+}
+
+
+
+.advantages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.advantage-block {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    flex: 1 0 30%;
+    max-width: 30%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.advantage-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.advantage-block i {
+    font-size: 2em;
+    color: #007bff;
+    margin-right: 20px;
+}
+
+.text-content {
+    text-align: left;
+}
+
+.text-content h2 {
+    color: #333333;
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+}
+
+.text-content p {
+    color: #666666;
+    font-size: 1em;
+    margin: 0;
+}
+
+
+</style>
+<body>
+    
+    <div id="seaSection">
+        
+    <header>
+        <h1>Road Transport</h1>
+        <button id="homeButton" onclick="location.href='services.html'">
+            <i class="fas fa-home"></i>
+        </button>
+    </header>
+
+    <section id="description">
+        <h2>Logistics For Road Transport</h2>
+        <p>Welcome to Road Transport, your reliable partner for all your transportation needs.
+            Road transport means transportation of goods and personnel from one place to the other on roads. Road is a route between two destinations, which has been either paved or worked on to enable transportation by way of motorised and non-motorised carriages.Road Freight is the physical process of transporting cargo by road using motor vehicles. In this case, road is a lane/route between the point of departure and the point of destination. Compared to other types of transport system such as sea and air, the cost of maintaining roads is cheaper.</p>
+          <img src="https://as1.ftcdn.net/v2/jpg/04/85/36/94/1000_F_485369402_AjfCerbVX5aj5zKXosLveapxoOkhU8kq.jpg" alt="Description Image">
+    </section>
+
+    <!-- <section> -->
+        <header>
+            <h1>Features of Road Transport</h1>
+        </header>
+        <main>
+            <section class="features-container">
+                <div class="feature-box">
+                    <div class="feature-content">
+                        <div class="feature-front">
+                            <img src="https://www.shutterstock.com/shutterstock/videos/1097347155/thumb/1.jpg?ip=x480" alt="Ship" class="transport-image">
+                        </div>
+                        <div class="feature-back">
+                            <div class="back-content">
+                                <h2>Cargo Capacity</h2>
+                                <p>Sea transport has a large cargo capacity, making it ideal for transporting bulky goods over long distances.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-content">
+                        <div class="feature-front">
+                            <img src="https://c4.wallpaperflare.com/wallpaper/965/443/612/road-bridge-blur-port-wallpaper-preview.jpg" alt="Container Ship" class="transport-image">
+                        </div>
+                        <div class="feature-back">
+                            <div class="back-content">
+                                <h2>Cost-Effective</h2>
+                                <p>It is one of the most cost-effective methods of transport, especially for international trade.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-content">
+                        <div class="feature-front">
+                            <img src="https://wallpapercave.com/wp/wp1956237.jpg" alt="Ferry" class="transport-image">
+                        </div>
+                        <div class="feature-back">
+                            <div class="back-content">
+                                <h2>Environmental Impact</h2>
+                                <p>Sea transport has a lower environmental impact compared to air transport in terms of carbon emissions per ton-km.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="feature-box">
+                    <div class="feature-content">
+                        <div class="feature-front">
+                            <img src="https://media.istockphoto.com/id/1418267688/photo/aerial-top-down-view-of-a-large-container-cargo-ship-with-copy-space.webp?b=1&s=170667a&w=0&k=20&c=soM-KJmJf6rKMnZHx7eJnhGYV_3-s5uXtmbTzztPzxI=" alt="Cruise Ship" class="transport-image">
+                        </div>
+                        <div class="feature-back">
+                            <div class="back-content">
+                                <h2>Long-Distance Travel</h2>
+                                <p>It is suitable for long-distance travel, connecting continents and facilitating global trade.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </section>
+        </main>
+        <header>
+            <h1>Advantages of Road Transport</h1>
+        </header>
+
+        <section class="advantages">
+            <div class="advantage-block">
+                <i class="fas fa-dollar-sign"></i>
+                <div class="text-content">
+                    <h2>Cost-Effective</h2>
+                    <p>Sea transport is generally cheaper compared to air and land transport, especially for bulky goods.</p>
+                </div>
+            </div>
+            <div class="advantage-block">
+                <i class="fas fa-box"></i>
+                <div class="text-content">
+                    <h2>Large Capacity</h2>
+                    <p>Ships can carry large volumes of goods, making it ideal for transporting heavy and bulky items.</p>
+                </div>
+            </div>
+            <div class="advantage-block">
+                <i class="fas fa-shield-alt"></i>
+                <div class="text-content">
+                    <h2>Safety</h2>
+                    <p>Sea transport is considered one of the safest modes of transport, with lower accident rates.</p>
+                </div>
+            </div>
+            <div class="advantage-block">
+                <i class="fas fa-leaf"></i>
+                <div class="text-content">
+                    <h2>Environmental Impact</h2>
+                    <p>Sea transport has a lower carbon footprint per ton of cargo compared to other modes of transport.</p>
+                </div>
+            </div>
+            <div class="advantage-block">
+                <i class="fas fa-globe"></i>
+                <div class="text-content">
+                    <h2>Global Reach</h2>
+                    <p>Ships can travel to almost any part of the world, providing extensive global coverage.</p>
+                </div>
+            </div>
+            <div class="advantage-block">
+                <i class="fas fa-shapes"></i>
+                <div class="text-content">
+                    <h2>Versatility</h2>
+                    <p>Sea transport can handle a wide variety of goods, from liquids to solids and everything in between.</p>
+                </div>
+            </div>
+        </section>
+    
+    <footer>
+      <div class="footer-container">
+          <div class="footer-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>1234 Street Name, City, Country</p>
+          </div>
+          <div class="footer-contact">
+              <div>
+                  <i class="fas fa-phone-alt"></i>
+                  <p>+1 234 567 890</p>
+              </div>
+              <div>
+                  <i class="fas fa-envelope"></i>
+                  <p>email@example.com</p>
+              </div>
+          </div>
+          <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="aboutus.html">About</a>
+              <a href="services.html">Services</a>
+              <a href="whyus.html">Why Us</a>
+              <a href="test.html">Testimonials</a>
+              <a href="contactus.html">Contact Us</a>
+          </div>
+      </div>
+  </footer>
+  <!-- <div>
+    <p style="justify-content: center;"> &copy; 2024 All Rights Reserved By</p>
+  </div> -->
+<script>
+  // scripts.js
+document.addEventListener('DOMContentLoaded', () => {
+    const features = document.querySelectorAll('.feature');
+    const advantages = document.querySelectorAll('#advantages li');
+    const descriptionImage = document.querySelector('#description img');
+
+    // Show description image
+    setTimeout(() => {
+        descriptionImage.style.opacity = '1';
+        descriptionImage.style.transform = 'scale(1)';
+    }, 500);
+
+    // Show features with delay
+    features.forEach((feature, index) => {
+        setTimeout(() => {
+            feature.classList.add('show');
+        }, index * 500);
+    });
+
+    // Show advantages with delay
+    advantages.forEach((advantage, index) => {
+        setTimeout(() => {
+            advantage.style.opacity = '1';
+            advantage.style.transform = 'translateY(0)';
+        }, index * 300);
+    });
+});
+
+</script>
+     
+    
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <title>LoGiStIcS</title>
+</head>
+<style>
+
+.body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    list-style: none;
+}
+header {
+            background-color: rgb(14, 14, 71);
+            padding: 10px 0;
+        }
+
+        .container11 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: lighter;
+        }
+
+        .logo h1 {
+            margin: 0;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: rgb(61, 19, 212);
+            text-decoration: none;
+        }
+
+
+
+
+ .body11 {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-side, .right-side {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .left-side {
+            border-right: 1px solid #ccc;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .info {
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #218838;
+        }
+
+        #success-message, #error-message {
+            margin-top: 10px;
+        }
+
+
+
+        footer {
+                background-color: #081655;
+                color: white;
+                padding: 20px 0;
+                margin-top: auto;
+            }
+    
+            footer .container22 {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+                flex-wrap: wrap;
+            }
+    
+            footer .footer-info,
+            footer .footer-links,
+            footer .footer-social {
+                flex: 1;
+                margin-right: 60px;
+                margin-bottom: 20px;
+            }
+    
+            footer .footer-info p {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                /* font-size: large; */
+            }
+    
+            footer .footer-info p i {
+                margin-right: 10px;
+            }
+    
+            footer .footer-links ul {
+                list-style: none;
+                padding: 0;
+            }
+    
+            footer .footer-links ul li {
+                margin-bottom: 10px;
+            }
+    
+            footer .footer-links ul li a {
+                color: white;
+                text-decoration: none;
+            }
+    
+            footer .footer-links ul li a:hover {
+                text-decoration: underline;
+            }
+    
+            footer .footer-social a {
+                margin-right: 39px;
+                font-size: 80px;
+            }
+    
+            @media (max-width: 768px) {
+                footer .container22 {
+                    flex-direction: column;
+                    align-items: center;
+                }
+    
+                footer .footer-info,
+                footer .footer-links,
+                footer .footer-social {
+                    margin-right: 0;
+                    text-align: center;
+                }
+            }
+
+</style>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container11">
+            <div class="logo">
+                <h1>LoGiStIcS</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index1.html">HOME</a></li>
+                    <li><a href="./services.html">SERVICES</a></li>
+                    <li><a href="./aboutus.html">ABOUT US</a></li>
+                    <li><a href="./whyus.html">WHY US</a></li>
+                    <li><a href="./test.html">TESTIMONIALS</a></li>
+                    <li><a href="./index.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br>
+<div class="body11">
+    <!-- Main content of the page goes here -->
+    <div class="container">
+        <div class="left-side">
+            <h2>Contact Information</h2>
+            <div class="info">
+                <strong>Address:</strong> 123 Street Namse, City, Country
+            </div>
+            <div class="info">
+                <strong>Phone:</strong> +123 456 7890
+            </div>
+            <div class="info">
+                <strong>Email:</strong> example@example.com
+            </div>
+            <div class="info">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509839!2d144.95373531567794!3d-37.81627974202157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577c0d7b4f7c9d7!2sVictoria!5e0!3m2!1sen!2sau!4v1614071416532!5m2!1sen!2sau"></iframe>
+            </div>
+        </div>
+        <div class="right-side">
+            <h2>Your Queries</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit" id="send-btn">Send Message</button>
+            </form>
+            <div id="success-message" style="display: none; color: green;">Successfully submitted form!</div>
+            <div id="error-message" style="display: none; color: red;">All fields are required!</div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            if (!validateForm(formData)) {
+                document.getElementById('error-message').style.display = 'block';
+                return;
+            }
+
+            document.getElementById('error-message').style.display = 'none';
+
+            fetch('/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    document.getElementById('success-message').style.display = 'block';
+                    clearForm();
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+
+        function validateForm(formData) {
+            return formData.name && formData.phone && formData.email && formData.message;
+        }
+
+        function clearForm() {
+            document.getElementById('name').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        }
+    </script>
+
+        
+        <footer>
+            <div class="container22">
+                <div class="footer-info">
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i>Address</p>
+                    <p><i class="fa fa-location-arrow" aria-hidden="true"></i>Location</p>
+                    <p><i class="fa fa-phone" aria-hidden="true"></i>Call: +01 1234567890</p>
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i>Email: demo@gmail.com</p>
+                    <h4>Follow Us</h4>
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+                
+                <div class="footer-social">
+                    <p>Information</p>
+                    <p>The necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="whyus.html">Why Us</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    
+    
+</body>
+</html>

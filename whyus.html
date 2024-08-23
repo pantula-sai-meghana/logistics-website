@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="./css/normal.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+  /*h1{*/
+/*   align-items: center;*/
+/*   justify-content: center;*/
+/*    margin: 20px auto;*/
+/*    padding: 0 20px;*/
+/*}*/
+
+.main-content {
+    display: flex;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20 20px;
+}
+
+.sectors-list {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.sector-item {
+    display: flex;
+    /* align-items: center; */
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sector-item i {
+    font-size: 1.5em;
+    margin-right: 15px;
+    color: #555;
+}
+
+.sector-item span {
+    font-size: 1.2em;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    width:70%;
+    height:70%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+<body>
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="images/hero-bg.png" alt="">
+      </div>
+    </div>
+
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              LoGiStIcS
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="log.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aboutus.html"> About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="whyus.html">Why Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="test.html">Testimonials</a>
+              </li>
+               <li class="nav-item">
+                <a class="nav-link" href="index.html">Contact Us</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="login.html"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+              </li> -->
+              <!-- <form class="form-inline">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form> -->
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+  
+
+    <div id="WhyusSection" class="para" onclick="display('WhyUsSection') ">
+        <h1 class="service">Why Us?</h1>
+        <div class="container1234">
+          <div class="left-side1234">
+              <div class="item1234">
+                  <img src="https://cdn-icons-png.freepik.com/256/8532/8532653.png?ga=GA1.1.2029271160.1716879514&semt=ais_hybrid" alt="Icon 1" class="icon1234">
+                  <div class="text1234">
+                      <h2>Cargo express</h2>
+                      <p>Description of the first point goes here.</p>
+                  </div>
+              </div>
+              <div class="item1234">
+                  <img src="https://cdn-icons-png.freepik.com/256/8532/8532653.png?ga=GA1.1.2029271160.1716879514&semt=ais_hybrid" alt="Icon 2" class="icon1234">
+                  <div class="text1234">
+                      <h2>Secure Services</h2>
+                      <p>Description of the second point goes here.</p>
+                  </div>
+              </div>
+              <div class="item1234">
+                  <img src="https://cdn-icons-png.freepik.com/256/8532/8532653.png?ga=GA1.1.2029271160.1716879514&semt=ais_hybrid" alt="Icon 3" class="icon1234">
+                  <div class="text1234">
+                      <h2>Secure Warehouseing</h2>
+                      <p>Description of the third point goes here.</p>
+                  </div>
+              </div>
+              <div class="item1234">
+                  <img src="https://cdn-icons-png.freepik.com/256/8532/8532653.png?ga=GA1.1.2029271160.1716879514&semt=ais_hybrid" alt="Icon 2" class="icon1234">
+                  <div class="text1234">
+                      <h2>Cost savings</h2>
+                      <p>Description of the second point goes here.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="right-side1234">
+              <img src="https://gocargonet.com/wp-content/uploads/2023/12/Building-a-Logistics-App.gif" class="truck">
+          </div>
+      </div>
+      </div>
+      <br>
+      <section>
+        <!-- <div id="WhyusSection" class="para" onclick="display('WhyUsSection') "> -->
+          <h1 class="service">Sectors We Serve</h1>
+      <div class="main-content">
+        <div class="sectors-list">
+            <div class="sector-item">
+                <i class="fas fa-car"></i>
+                <span>Automotive & Tyres</span>
+            </div>
+            <div class="sector-item">
+                <i class="fas fa-box"></i>
+                <span>FMCG</span>
+            </div>
+            <div class="sector-item">
+                <i class="fas fa-plug"></i>
+                <span>Electrical and Electronics</span>
+            </div>
+            <div class="sector-item">
+                <i class="fas fa-pills"></i>
+                <span>Pharmaceuticals</span>
+            </div>
+        </div>
+        <div class="image-section">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoaFZKbQCR4hYyLuZjIfi9XHRniLgj6gdbDbr9k-mr_b4DVQqlpgIUo9eWWWlvaOLBrhw&usqp=CAU" alt="Image description">
+        </div>
+    </div>
+  </section>
+    
+
+       
+
+      <section class="info_section layout_padding2">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3 info_col">
+              <div class="info_contact">
+                <h4>
+                  Address
+                </h4>
+                <div class="contact_link_box">
+                  <a href="">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <span>
+                      Location
+                    </span>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <span>
+                      Call +01 1234567890
+                    </span>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <span>
+                      demo@gmail.com
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="info_social">
+                <a href="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 info_col">
+              <div class="info_detail">
+                <h4>
+                  Info
+                </h4>
+                <p>
+                  necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-2 mx-auto info_col">
+              <div class="info_link_box">
+                <h4>
+                  Links
+                </h4>
+                <div class="info_links">
+                  <a class="active" href="index.html">
+                    Home
+                  </a>
+                  <a class="" href="aboutus.html">
+                    About
+                  </a>
+                  <a class="" href="service.html">
+                    Services
+                  </a>
+                  <a class="" href="why.html">
+                    Why Us
+                  </a>
+                  <a class="" href="team.html">
+                    Testimonials
+                  </a>
+                  <a class="" href="team.html">
+                    Contact Us
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-md-6 col-lg-3 info_col ">
+              <h4>
+                Subscribe
+              </h4>
+              <form action="#">
+                <input type="text" placeholder="Enter email" />
+                <button type="submit">
+                  Subscribe
+                </button>
+              </form>
+            </div> -->
+          </div>
+        </div>
+      </section>
+  
+    <section class="footer_section">
+      <div class="container">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By
+          <!-- <a href="https://html.design/">Free Html Templates</a> -->
+        </p>
+      </div>
+    </section>
+    <!-- footer section -->
+  
+    <!-- jQery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <!-- bootstrap js -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- owl slider -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <!-- custom js -->
+    <script type="text/javascript" src="js/custom.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+    </script>
+    <!-- End Google Map -->
+  
+  </body>
+  
+  </html>
+    

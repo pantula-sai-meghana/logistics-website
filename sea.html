@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEA Transport</title>
+    <!--<link rel="stylesheet" href="styles.css">-->
+    <!--<script defer src="script.js"></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="./css/normal.css"> -->
+    <!-- <link rel="stylesheet" href="./css/responsive.css">  -->
+     <!-- <link rel="stylesheet" href="./css/style.css">  -->
+     <link rel="stylesheet" href="./css/normal.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: rgb(7, 2, 59);
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-container div {
+    margin: 10px 0;
+}
+
+.footer-address, .footer-contact, .footer-social, .footer-links {
+    width: 100%;
+}
+
+.footer-address p, .footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.footer-contact i {
+    margin-right: 10px;
+}
+
+.footer-social a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    color: #ffa500;
+}
+
+
+  /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: rgb(4, 13, 65);
+}
+img {
+    display: block;
+    width: 80%;
+    height:70%;
+    margin: 1rem auto;
+}
+header {
+   background-image:url('https://connectedaviationtoday.com/wp-content/uploads/2018/12/shutterstock_1145439569.jpg');
+    background-color: #0056b3;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    display: inline;
+}
+
+#homeButton {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+section {
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s ease;
+}
+
+.feature i {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #0056b3;
+}
+
+.feature h3 {
+    margin: 0;
+}
+
+.feature p {
+    margin: 0.5rem 0 0 0;
+}
+
+#advantages ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#advantages li {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 1s ease;
+}
+
+#advantages i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #0056b3;
+}
+
+ #description img {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 1s ease-in-out;
+}
+
+ .show {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+} 
+
+/* .foot p{
+  color:blue;
+  align-items: center;
+} */
+
+</style>
+<body>
+    
+    <div id="seaSection">
+    <header>
+        <h1>SEA Transport</h1>
+        <button id="homeButton" onclick="location.href='services.html'">
+            <i class="fas fa-home"></i>
+        </button>
+    </header>
+
+    <section id="description">
+        <h2>Logistics For Sea Transport</h2>
+        <p>Welcome to SEA Transport, your reliable partner for all your transportation needs.
+        
+          Sea freight is a shipping method used by businesses to transport large amounts of goods overseas by sea using cargo ships. Since it’s cost-effective, most businesses prefer to use this mode of transportation, when they have to move a huge quantity of goods.
+
+          Sea freight is distinct from traditional modes of goods transportation as ideally large loads of good, or heavy machinery is shipped through Sea freight. 
+          
+          In Sea freight, goods are transported in large metal containers (You must’ve probably seen one if you have been to a seaport). There are fewer restrictions imposed on sea freight. Sea freight is also used to transport several crucial commodities for a country, like Oil, Defence Equipment, and Aircraft.</p>
+        <img src="https://assets.newatlas.com/dims4/default/d596394/2147483647/strip/true/crop/5029x2829+0+0/resize/2880x1620!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F6e%2F67%2F0b6027b64a9ca006c6dc95ada3ba%2Fdepositphotos-91892208-xl.png" alt="Description Image">
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <div class="feature">            <i class="fas fa-truck"></i>
+          <h3>Global Shipping</h3>
+          <p>Experience seamless global shipping services with SEA Transport.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Secure Docking</h3>
+            <p>Ensuring the safety and security of your goods at every port.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-globe"></i>
+            <h3>Efficient Routes</h3>
+            <p>Optimized shipping routes to ensure timely delivery.</p>
+        </div>
+    </section>
+
+    <section id="advantages">
+        <h2>Advantages</h2>
+        <ul>
+            <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Reliable and timely deliveries</span>
+            </li>
+            <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Affordable pricing</span>
+            </li>
+            <li>
+                <i class="fas fa-check-circle"></i>
+                <span>24/7 customer support</span>
+            </li>
+            <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Modern fleet of vehicles</span>
+            </li>
+            <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Customizable solutions</span>
+            </li>
+        </ul>
+    </section>
+
+    
+    <footer>
+      <div class="footer-container">
+          <div class="footer-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>1234 Street Name, City, Country</p>
+          </div>
+          <div class="footer-contact">
+              <div>
+                  <i class="fas fa-phone-alt"></i>
+                  <p>+1 234 567 890</p>
+              </div>
+              <div>
+                  <i class="fas fa-envelope"></i>
+                  <p>email@example.com</p>
+              </div>
+          </div>
+          <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="aboutus.html">About</a>
+              <a href="services.html">Services</a>
+              <a href="whyus.html">Why Us</a>
+              <a href="test.html">Testimonials</a>
+              <a href="contactus.html">Contact Us</a>
+          </div>
+      </div>
+  </footer>
+  <!-- <div>
+    <p style="justify-content: center;"> &copy; 2024 All Rights Reserved By</p>
+  </div> -->
+<script>
+  // scripts.js
+document.addEventListener('DOMContentLoaded', () => {
+    const features = document.querySelectorAll('.feature');
+    const advantages = document.querySelectorAll('#advantages li');
+    const descriptionImage = document.querySelector('#description img');
+
+    // Show description image
+    setTimeout(() => {
+        descriptionImage.style.opacity = '1';
+        descriptionImage.style.transform = 'scale(1)';
+    }, 500);
+
+    // Show features with delay
+    features.forEach((feature, index) => {
+        setTimeout(() => {
+            feature.classList.add('show');
+        }, index * 500);
+    });
+
+    // Show advantages with delay
+    advantages.forEach((advantage, index) => {
+        setTimeout(() => {
+            advantage.style.opacity = '1';
+            advantage.style.transform = 'translateY(0)';
+        }, index * 300);
+    });
+});
+
+</script>
+     
+    
+</body>
+</html>

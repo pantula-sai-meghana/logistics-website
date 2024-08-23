@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+}
+
+.login-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#loginBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#forgotPassword,
+#registerLink {
+  color: blue;
+  cursor: pointer;
+}
+
+#forgotPassword:hover,
+#registerLink:hover {
+  text-decoration: underline;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image:url("https://t3.ftcdn.net/jpg/01/78/85/36/360_F_178853689_Sc0yl0qxzGWv8rYkSFBay5FlHxTso4g6.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.registration-container {
+  background-color: rgb(255, 255, 255);
+  padding: 70px;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  height:610px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.gender-options {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.gender-options label {
+  margin: 0;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+
+
+    </style>
+<body>
+     <div class="registration-container">
+    <form id="registrationForm">
+      <h2>Register</h2>
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" name="firstname" required>
+
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" name="lastname" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label>Gender:</label>
+      <div class="gender-options">
+        <label for="male">
+          <input type="radio" id="male" name="gender" value="male" required> Male
+        </label>
+        <label for="female">
+          <input type="radio" id="female" name="gender" value="female" required> Female
+        </label>
+      </div>
+
+      <button type="submit">Register</button>
+
+    </form>
+    <script>
+      document.getElementById('registrationForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          console.log('loginSubmit');
+          const formData = {
+              firstname: document.getElementById('firstname').value,
+              lastname: document.getElementById('lastname').value,
+              email: document.getElementById('email').value,
+              password: document.getElementById('password').value,
+              gender: document.querySelector('input[name="gender"]:checked').value
+          };
+      
+          fetch('/register', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(formData)
+          })
+          .then(response => response.json())
+          .then(data => {
+              alert(data.message);
+              if (data.message === 'Registration successful') {
+                  clearForm();
+              }
+          })
+          .catch(error => {
+              console.error('Error:', error);
+          });
+      });
+      
+      function clearForm() {
+          document.getElementById('firstname').value = '';
+          document.getElementById('lastname').value = '';
+          document.getElementById('email').value = '';
+          document.getElementById('password').value = '';
+          document.querySelector('input[name="gender"]:checked').checked = false;
+      }
+      </script>
+      
+    <!-- <script>
+      document.getElementById('registrationForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+
+          const formData = {
+              name: document.getElementById('first').value,
+              phone: document.getElementById('last').value,
+              email: document.getElementById('email').value,
+              message: document.getElementById('password').value
+          };
+
+          if (!validateForm(formData)) {
+              document.getElementById('error-message').style.display = 'block';
+              return;
+          }
+
+          document.getElementById('error-message').style.display = 'none';
+
+
+          fetch('/register', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+})
+.then(response => response.json())
+.then(data => {
+    if (data.message) {
+        alert(data.message);
+        if (data.message === 'Registration successful') {
+            clearForm();
+        }
+    }
+})
+.catch((error) => {
+    console.error('Error:', error);
+});
+
+
+      //     fetch('/submit', {
+      //         method: 'POST',
+      //         headers: {
+      //             'Content-Type': 'application/json'
+      //         },
+      //         body: JSON.stringify(formData)
+      //     })
+      //     .then(response => response.json())
+      //     .then(data => {
+      //         if (data.message) {
+      //             document.getElementById('success-message').style.display = 'block';
+      //             clearForm();
+      //         }
+      //     })
+      //     .catch((error) => {
+      //         console.error('Error:', error);
+      //     });
+      });
+
+      function validateForm(formData) {
+          return formData.name && formData.phone && formData.email && formData.message;
+      }
+
+      function clearForm() {
+          document.getElementById('first').value = '';
+          document.getElementById('last').value = '';
+          document.getElementById('email').value = '';
+          document.getElementById('password').value = '';
+      }
+  </script> -->
+
+    <div class="login-container">
+        <p> If registered, Login below</p>
+        <button id="loginBtn">Login</button>
+        <div id="loginModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="loginSubmit">
+              <label for="username">Username:</label>
+              <input type="text" id="username11" name="username" required>
+              <label for="password">Password:</label>
+              <input type="password" id="password11" name="password" required>
+              <button type = "submit">Login</button>
+              <!-- <button type="submit" id="loginBtn">Login</button> -->
+              <a href="#" id="forgotPassword">Forgot Password?</a>
+              <p>Not a member? <a href="login.html" id="registerLink">Register</a></p>
+            </form>
+            
+
+
+            <!-- <form id="loginForm" action="">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+              <button type="submit">Login</button>
+              <a href="#" id="forgotPassword">Forgot Password?</a>
+              <p>Not a member? <a href="login.html" id="registerLink">Register</a></p>
+          </form> -->
+          
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <script>
+    document.getElementById('loginBtn').onclick = function() {
+  document.getElementById('loginModal').style.display = 'block';
+};
+
+document.querySelector('.close').onclick = function() {
+  document.getElementById('loginModal').style.display = 'none';
+};
+
+window.onclick = function(event) {
+  console.log('onslickkkloginSubmit');
+  if (event.target == document.getElementById('loginModal')) {
+    document.getElementById('loginModal').style.display = 'none';
+  }
+};
+
+  document.getElementById('loginSubmit').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Fetch the JSON file
+    fetch('./db1.json')
+        .then(response => response.json())
+        .then(accounts => {
+            const username = document.getElementById('username11').value;
+            const password = document.getElementById('password11').value;
+            console.log('accounts', accounts);
+
+            // Check if the username and password match
+            const user = accounts.find(account => account.email === username && account.password === password);
+            console.log('user', user);
+            if (user) {
+                console.log('Login successful!');
+                alert("Login successful!")
+                window.location.href = 'log.html'; 
+                // Redirect to the next page or show a success message
+            } else {
+                console.log('Invalid username or password');
+                alert("Invalid username or password")
+                // Show an error message
+            }
+        })
+        .catch(error => console.error('Error fetching accounts:', error));
+});
+//   console.log('loginSubmit');
+//   event.preventDefault();
+//   var fs = require('fs');
+//   var accounts = JSON.parse(fs.readFileSync('./db1.json'));
+//   console.log('accounts', accounts);
+//   // const firstname = document.getElementById('firstname').value;
+//   // const lastname = document.getElementById('lastname').value;
+//   const username = document.getElementById('username11').value;
+//   const password = document.getElementById('password11').value;
+//   console.log('username==',username);
+//   console.log('password=',password);
+//   // const gender = document.querySelector('input[name="gender"]:checked').value;
+//   // console.log('First Name:', firstname);
+//   // console.log('Last Name:', lastname);
+//   // console.log('Email:', email);
+//   // console.log('Password:', password);
+//   // console.log('Gender:', gender);
+//   if(accounts.username == username && accounts.password == password)
+// {
+//   alert('Registration successful! Login below');
+// }
+// else 
+// {
+//   alert('Invalid details');
+// }
+
+//});
+
+  </script>
+
+<!--   
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+    
+        const loginData = {
+            email: document.getElementById('username').value,
+            password: document.getElementById('password').value
+        };
+    
+        fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(loginData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            if (data.message === 'Login successful') {
+                window.location.href = '/dashboard.html'; // Redirect to a dashboard or home page
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+    </script> -->
+    
+</body>
+</html>

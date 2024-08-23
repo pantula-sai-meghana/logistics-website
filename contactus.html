@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact us</title>
+    <link rel="stylesheet" href="./css/normal.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/responsive.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+  /* Contact Section */
+.contact {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: darkblue;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.contact-details, .contact-form-container {
+  flex: 1;
+  min-width: calc(50% - 15px);
+}
+
+.contact-item {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  /* margin-right:50px; */
+}
+
+.contact-item h3 {
+  font-size: 20px;
+  color: darkblue;
+  margin-bottom: 10px;
+  padding: 0px;
+}
+
+.contact-item p {
+  font-size: 16px;
+  color: black;
+}
+
+.contact-item iframe {
+  width: 100%;
+  height: 200px;
+  border: 0;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 1px;
+  color: #333;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 90%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  display: inline-block;
+  background-color: #24af01;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #007700;
+}
+
+@media (max-width: 992px) {
+  .contact-details, .contact-form-container {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Contact Form Styles */
+.contact-form {
+  position: relative;
+}
+
+.message {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.success,
+.danger {
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: none;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.success,
+.danger {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+
+
+</style>
+<body>
+  
+    <div class="hero_area">
+  
+      <div class="hero_bg_box">
+        <div class="bg_img_box">
+          <img src="images/hero-bg.png" alt="">
+        </div>
+      </div>
+  
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="log.html">
+              <span>
+                LoGiStIcS
+              </span>
+            </a>
+  
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+  
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="aboutus.html"> About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="whyus.html">Why Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="test.html">Testimonials</a>
+                </li>
+                 <li class="nav-item">
+                  <a class="nav-link" href="contactus.html">Contact Us<span class="sr-only">(current)</span></a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="login.html"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+                </li> -->
+                <!-- <form class="form-inline">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form> -->
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <br>
+      
+
+
+    <section id="contactus" class="contact">
+      <div class="container">
+        
+        <!-- <h2 class="section-title">Contact Us</h2> -->
+        <div class="row">
+          <!-- Contact Details -->
+          <div class="col-lg-6 col-md-7 contact-details" data-aos="fade-up" data-aos-delay="200">
+            <div class="contact-item">
+              
+              <h3>Address</h3>
+              <p>Mumbai,India </p>
+            </div>
+            <div class="contact-item">
+              <h3>Phone Number</h3>
+              <p>+91 9123456789</p>
+            </div>
+            <div class="contact-item">
+              <h3>Email</h3>
+              <p>example@gmail.com</p>
+            </div>
+            <div class="contact-item">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086237055392!2d-122.4194154846819!3d37.77492977975953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f7b1e7e1%3A0x9b9b9a0d1048b5f0!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1625840549444!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+          <!-- Contact Form -->
+           <!-- <section id="Contact Us"> -->
+          <!-- <div class="col-lg-6 col-md-12 contact-form-container" data-aos="fade-up" data-aos-delay="600">
+            <h1 style="text-align:center;">Queries</h1>
+            <form action="responce.php" method="post" class="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit">Send Message</button>
+              <div class="message">
+                Your Message Successfully Sent!
+                <!-- <div class="success" id="success">Your Message Successfully Sent!</div>
+                <div class="danger" id="danger">Feilds Can't be Empty!</div> 
+              </div>
+            </form>
+          </div> -->
+<!-- Contact Form -->
+<div class="col-lg-6 col-md-12 contact-form-container" data-aos="fade-up" data-aos-delay="600">
+  <h1 style="text-align:center;">Queries</h1>
+  <form id="contactForm" action="responce.php" method="post" class="contact-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <button id="send-btn">Send Message</button>
+  </form>
+  <div class="message" id="successMessage" style="display:none;">Your Message Successfully Sent!</div>
+</div>
+
+        </div>
+      </div>
+      </section>
+
+
+      <script>
+        document.getElementById('send-btn').addEventListener('click', (e) => {
+	e.preventDefault();
+	
+	const formData = {
+		name: document.getElementById('name').value,
+		phone: document.getElementById('phone').value,
+		email: document.getElementById('email').value,
+		message: document.getElementById('message').value
+	};
+
+	// Validate form data
+	if (!validateForm(formData)) {
+		document.getElementById('error-message').style.display = 'block';
+		return; // Exit the function if validation fails
+	}
+
+	document.getElementById('error-message').style.display = 'none';
+
+	fetch('/submit', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(formData)
+	})
+	.then(response => response.json())
+	.then(data => {
+		if (data.message) {
+			document.getElementById('success-message').style.display = 'block';
+			clearForm(); // Clear the form fields
+		}
+	})
+	.catch((error) => {
+		console.error('Error:', error);
+	});
+});
+
+function validateForm(formData) {
+	return formData.name && formData.phone && formData.email && formData.message;
+}
+
+function clearForm() {
+	document.getElementById('name').value = '';
+	document.getElementById('phone').value = '';
+	document.getElementById('email').value = '';
+	document.getElementById('message').value = '';
+}
+
+      </script>
+
+
+      <!-- <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          
+          const form = event.target;
+          const formData = new FormData(form);
+        
+          fetch(form.action, {
+            method: form.method,
+            body: formData
+          })
+          .then(response => response.text())
+          .then(data => {
+            if (data.includes('New record created successfully')) {
+              document.getElementById('successMessage').style.display = 'block';
+              form.reset(); // Reset the form
+            } else {
+              alert('There was an error submitting your message. Please try again.');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error submitting your message. Please try again.');
+          });
+        });
+        </script> -->
+
+
+
+
+
+
+        
+      <!-- <script>
+    
+        const form = document.querySelector('.contact-form');
+        const successMessage = document.getElementById('success');
+        const dangerMessage = document.getElementById('danger');
+        
+        
+        form.addEventListener('submit', function(event) {
+          event.preventDefault(); 
+        
+          
+          const name = document.getElementById('name').value;
+          const phone = document.getElementById('phone').value;
+          const email = document.getElementById('email').value;
+          const message = document.getElementById('message').value;
+        
+          // Validate the form fields
+          if (name.trim() === '' || phone.trim() === '' || email.trim() === '' || message.trim() === '') {
+            // Display the error message
+            dangerMessage.style.display = 'block';
+            successMessage.style.display = 'none';
+          } else {
+            // Display the success message
+            successMessage.style.display = 'block';
+            dangerMessage.style.display = 'none';
+        
+            // Reset the form
+            form.reset();
+            }
+          });
+           
+          </script> -->
+
+
+
+
+    
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>
+              Address
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +01 1234567890
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  demo@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_detail">
+            <h4>
+              Info
+            </h4>
+            <p>
+              necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="info_links">
+              <a class="active" href="index.html">
+                Home
+              </a>
+              <a class="" href="aboutus.html">
+                About
+              </a>
+              <a class="" href="service.html">
+                Services
+              </a>
+              <a class="" href="why.html">
+                Why Us
+              </a>
+              <a class="" href="team.html">
+                Testimonials
+              </a>
+              <a class="" href="team.html">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-6 col-lg-3 info_col ">
+          <h4>
+            Subscribe
+          </h4>
+          <form action="#">
+            <input type="text" placeholder="Enter email" />
+            <button type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+
+  
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <!-- <a href="https://html.design/">Free Html Templates</a> -->
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>
+
+
+
+
+
